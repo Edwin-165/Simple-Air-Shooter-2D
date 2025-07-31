@@ -5,9 +5,15 @@ var Bullet = preload("res://Scene/enemybullet.tscn")
 var player = null
 
 @export var speed = 2
+@export var health = 6
 
 @onready var gunpos = $GunPos
+@onready var muzzleflash = $MuzzleFlash
+@onready var flash_sprite = $Flash
 @onready var shotSpeed = $ShotSpeed
+
+func _ready() -> void:
+	flash_sprite.visible = false
 
 func _on_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -32,4 +38,10 @@ func shoot():
 	bullet.position = gunpos.global_position
 	get_parent().add_child(bullet)
 	
+	muzzleflash.play("MuzzleFlash")
 	shotSpeed.start()
+
+func enemy_hit():
+	health -= 1
+	if health == 0:
+		queue_free()
