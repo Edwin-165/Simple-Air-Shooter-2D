@@ -5,7 +5,7 @@ var Bullet = preload("res://Scene/enemybullet.tscn")
 var player = null
 
 @export var speed = 2
-@export var health = 6
+@export var health = 3
 
 @onready var gunpos = $GunPos
 @onready var muzzleflash = $MuzzleFlash
@@ -44,4 +44,5 @@ func shoot():
 func enemy_hit():
 	health -= 1
 	if health == 0:
+		Global.score += 5
 		queue_free()

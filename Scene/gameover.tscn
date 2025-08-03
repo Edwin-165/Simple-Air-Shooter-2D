@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdgpbloc6uw8k"]
+
+[ext_resource type="PackedScene" uid="uid://tuxn14g4c7e" path="res://Scene/mainmenu.tscn" id="1_hxj7v"]
+
+[node name="Gameover" instance=ExtResource("1_hxj7v")]
+
+[node name="MainMenu" parent="CenterContainer" index="0"]
+text = "Game Over"
+
+[node name="Play" parent="CenterContainer2/VBoxContainer" index="0"]
+text = "  Restart  "

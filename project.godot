@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Air Shooter"
-run/main_scene="uid://2js14a0w642x"
+run/main_scene="uid://tuxn14g4c7e"
 config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+Global="*res://Script/Global.gd"
 
 [display]
 

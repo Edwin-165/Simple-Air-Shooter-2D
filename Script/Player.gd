@@ -62,5 +62,10 @@ func shoot():
 	
 func player_hit():
 	health -= 1
+	Global.health -= 1
 	if health == 0:
-		queue_free()
+		call_deferred("_on_player_death")
+
+func _on_player_death():
+	get_tree().change_scene_to_file("res://Scene/gameover.tscn")
+	queue_free()
