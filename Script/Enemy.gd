@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var Bullet = preload("res://Scene/enemybullet.tscn")
+var Explosion = preload("res://Scene/explosion.tscn")
 
 var player = null
 
@@ -44,5 +45,9 @@ func shoot():
 func enemy_hit():
 	health -= 1
 	if health == 0:
+		Global.camera.screen_shake(5.0, 5.0, 0.05)
 		Global.score += 5
+		var explosion = Explosion.instantiate()
+		explosion.global_position = global_position
+		get_tree().current_scene.add_child(explosion)
 		queue_free()

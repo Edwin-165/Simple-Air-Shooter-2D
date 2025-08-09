@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://4wgmd35k0jrs"]
+
+[ext_resource type="Texture2D" uid="uid://bletl8kxhf52k" path="res://Assets/Textures/Particle.png" id="1_mko8c"]
+[ext_resource type="Script" uid="uid://sdgal05v5mks" path="res://Script/explosion.gd" id="2_sfpm1"]
+
+[sub_resource type="Curve" id="Curve_iwclj"]
+_data = [Vector2(0, 0.853933), 0.0, 0.0, 0, 0, Vector2(0.8125, 0.224719), -0.0878901, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_kt3rl"]
+offsets = PackedFloat32Array(0, 0.513333, 1)
+colors = PackedColorArray(1, 0.960784, 0.0392157, 1, 1, 0.631462, 0.2578, 1, 0.770036, 0, 0.133917, 1)
+
+[node name="Explosion" type="CPUParticles2D"]
+scale = Vector2(2, 2)
+emitting = false
+amount = 50
+texture = ExtResource("1_mko8c")
+one_shot = true
+speed_scale = 3.0
+explosiveness = 0.8
+randomness = 0.5
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 0.01
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 50.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_iwclj")
+color_ramp = SubResource("Gradient_kt3rl")
+script = ExtResource("2_sfpm1")

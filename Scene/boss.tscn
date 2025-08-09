@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2bdpew4mtw5a"]
+
+[ext_resource type="Script" uid="uid://cw1vqngk6fu7j" path="res://Script/Boss.gd" id="1_bv8a7"]
+[ext_resource type="Texture2D" uid="uid://dflmps0rvhntv" path="res://Assets/Planes/Boss.png" id="1_mi78u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv8a7"]
+size = Vector2(99, 148)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_46auw"]
+radius = 663.027
+
+[node name="Boss" type="CharacterBody2D"]
+script = ExtResource("1_bv8a7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(5, 5)
+texture = ExtResource("1_mi78u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_bv8a7")
+one_way_collision_margin = 0.0
+
+[node name="GunPos1" type="Marker2D" parent="."]
+position = Vector2(-35, -47.5)
+
+[node name="GunPos2" type="Marker2D" parent="."]
+position = Vector2(-35, 47.5)
+
+[node name="Shotspeed" type="Timer" parent="."]
+autostart = true
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("CircleShape2D_46auw")
+
+[connection signal="timeout" from="Shotspeed" to="." method="_on_shotspeed_timeout"]
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]

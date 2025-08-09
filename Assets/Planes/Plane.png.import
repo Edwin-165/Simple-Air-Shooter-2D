@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djvaj760c4r61"
-path="res://.godot/imported/MuzzleFlash.png-e149fbb3c6c5fe7251e9ebd1a5d2fd01.ctex"
+uid="uid://cf0ql7e2fq6gg"
+path="res://.godot/imported/Plane.png-bd5e5846fdbf709b6787f2a5635a31eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MuzzleFlash.png"
-dest_files=["res://.godot/imported/MuzzleFlash.png-e149fbb3c6c5fe7251e9ebd1a5d2fd01.ctex"]
+source_file="res://Assets/Planes/Plane.png"
+dest_files=["res://.godot/imported/Plane.png-bd5e5846fdbf709b6787f2a5635a31eb.ctex"]
 
 [params]
 

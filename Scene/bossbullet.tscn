@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpl2lh21lou2t"]
+
+[ext_resource type="Script" uid="uid://cp72gy82isrie" path="res://Script/BossBullet.gd" id="1_5vitb"]
+[ext_resource type="Texture2D" uid="uid://cnrpkchqjohtt" path="res://Assets/Textures/tiles_packed.png" id="1_sbiga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vitb"]
+size = Vector2(28, 24)
+
+[node name="Bossbullet" type="Area2D"]
+script = ExtResource("1_5vitb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("1_sbiga")
+region_enabled = true
+region_rect = Rect2(18, 1, 12, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5vitb")
+
+[node name="DespawnShot" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DespawnShot" to="." method="_on_despawn_shot_timeout"]

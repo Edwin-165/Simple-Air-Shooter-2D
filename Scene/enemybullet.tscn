@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://by1lfubkbxmjn"]
 
-[ext_resource type="Texture2D" uid="uid://bhq5rqofavavx" path="res://Assets/Tiles.png" id="1_0ieub"]
+[ext_resource type="Texture2D" uid="uid://bhq5rqofavavx" path="res://Assets/Textures/Tiles.png" id="1_0ieub"]
 [ext_resource type="Script" uid="uid://dd5yafryi26ht" path="res://Script/EnemyBullet.gd" id="1_if7b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if7b8"]

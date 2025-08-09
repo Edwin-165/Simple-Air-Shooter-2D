@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://blpfqo6ud5bxq"]
 
 [ext_resource type="Script" uid="uid://bxsxxr032gwsw" path="res://Script/Enemy.gd" id="1_h0dic"]
-[ext_resource type="Texture2D" uid="uid://b82toshnnc08d" path="res://Assets/Enemy.png" id="2_jy6qf"]
-[ext_resource type="Texture2D" uid="uid://djvaj760c4r61" path="res://Assets/MuzzleFlash.png" id="3_jy6qf"]
+[ext_resource type="Texture2D" uid="uid://b82toshnnc08d" path="res://Assets/Planes/Enemy.png" id="2_jy6qf"]
+[ext_resource type="Texture2D" uid="uid://djvaj760c4r61" path="res://Assets/Textures/MuzzleFlash.png" id="3_jy6qf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_le5ry"]
 size = Vector2(51, 60)
